@@ -46,6 +46,7 @@ class _MyWidgetState extends State<MyHome> {
             color: Colors.deepOrange
           ) ,
           ),
+  SizedBox(height: 50,),
   Row(
   children: [
    SizedBox( 
