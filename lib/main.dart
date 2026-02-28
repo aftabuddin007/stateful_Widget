@@ -9,17 +9,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: "Aftab", home:MyHome());
+    return MaterialApp(title: "Aftab", home: MyHome());
   }
 }
-
-
-
-
-
-
-
-
 
 class MyHome extends StatefulWidget {
   const MyHome({super.key});
@@ -41,40 +33,54 @@ class _MyWidgetState extends State<MyHome> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-          Text(count.toString(),style:TextStyle(
-            fontSize: 30,
-            color: Colors.deepOrange
-          ) ,
-          ),
-  SizedBox(height: 50,),
-  Row(
-  children: [
-   SizedBox( 
-    width: 180,
+            Text(
+              count.toString(),
+              style: TextStyle(fontSize: 60, color: Colors.deepOrange),
+            ),
+            SizedBox(height: 50),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 180,
 
-    child:ElevatedButton(onPressed: (){}, child: Text("+",style: TextStyle(
-      fontSize: 40,
-      color: Colors.black
-    ),)),
-    
-    ),
-SizedBox(width: 10,),
-SizedBox( 
-    width: 180,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        
+                      count++;
+                      });
+                      print(count);
 
-    child:ElevatedButton(onPressed: (){}, child: Text("-",style: TextStyle(
-      fontSize: 40,
-      color: Colors.black
-    ),)),
-    
-    ),
+                    },
+                    child: Text(
+                      "+",
+                      style: TextStyle(fontSize: 40, color: Colors.black),
+                    ),
+                  ),
+                ),
+                SizedBox(width: 10),
+                SizedBox(
+                  width: 180,
 
-    
-  ],
-)
-
-
-        ],),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        
+                      count--;
+                      });
+                      print(count);
+                    },
+                    child: Text(
+                      "-",
+                      style: TextStyle(fontSize: 40, color: Colors.black),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
