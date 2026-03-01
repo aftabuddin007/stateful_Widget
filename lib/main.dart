@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stateful_widget1/widget/CityCard.dart';
 
 void main() {
   runApp(const MyApp());
@@ -78,25 +79,20 @@ class _MyWidgetState extends State<MyHome> {
             ),
 
             SizedBox(height: 50),
-            Container(
-              margin: EdgeInsets.all(10),
-              padding: EdgeInsets.all(10),
-             decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(20),
-              boxShadow: [
-                BoxShadow(color: Colors.grey )
-              ]
-             ),
-              height: 200,
-              child: Column(
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
                 children: [
-                  Image.network(
-                    "https://i.ibb.co.com/PsGbnmH3/51z5-It-EXp-BL-AC-UF894-1000-QL80.jpg",
-                    height: 200,
-                    width: 200,
-                  ),
-                  Text("This is facebook logo"),
+                  CityCard(),
+                  SizedBox(width: 10),
+                  CityCard(),
+                  SizedBox(width: 10),
+                  CityCard(),
+                  SizedBox(width: 10),
+                  CityCard(),
+                  SizedBox(width: 10),
+                  CityCard(),
+                  SizedBox(width: 10),
                 ],
               ),
             ),
