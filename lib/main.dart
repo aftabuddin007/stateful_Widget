@@ -83,15 +83,25 @@ class _MyWidgetState extends State<MyHome> {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  CityCard(),
+                  CityCard(
+                    image:
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSimtZyskdR3y0AtCiHyEebU1o7mZQFOA6F0Q&s",
+                    city: "Cat",
+                  ),
                   SizedBox(width: 10),
-                  CityCard(),
+
+                  CityCard(
+                    image:
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZO8tyDS6dinqoUZmnZO2kyzpvdd7irfh5EA&s",
+                    city: "Cow",
+                  ),
                   SizedBox(width: 10),
-                  CityCard(),
-                  SizedBox(width: 10),
-                  CityCard(),
-                  SizedBox(width: 10),
-                  CityCard(),
+
+                  CityCard(
+                    image:
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxjF2NAE5TJX1VjNAfNEvMWAMK9R-rjz98EA&s",
+                    city: "Goat",
+                  ),
                   SizedBox(width: 10),
                 ],
               ),

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CityCard extends StatelessWidget {
-  const CityCard({super.key});
+  final String image, city;
+  const CityCard({super.key, required this.image, required this.city});
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +20,9 @@ class CityCard extends StatelessWidget {
       height: 300,
       child: Column(
         children: [
-          Image.network(
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlrZqTCInyg6RfYC7Ape20o-EWP1EN_A8fOA&s",
-            height: 200,
-            width: 200,
-          ),
+          Image.network(image, height: 200, width: 200),
           SizedBox(height: 20),
-          Text("This is facebook logo"),
+          Text(city),
         ],
       ),
     );
