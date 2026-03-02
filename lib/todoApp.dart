@@ -17,6 +17,12 @@ class _TodoAppState extends State<TodoApp> {
     }
   }
 
+  void _deleteTask(int index) {
+    setState(() {
+      _tasks.removeAt(index);
+    });
+  }
+
   List<String> _tasks = [];
   TextEditingController taskController = TextEditingController();
 
@@ -59,7 +65,7 @@ class _TodoAppState extends State<TodoApp> {
                     child: ListTile(
                       title: Text(_tasks[index]),
                       trailing: IconButton(
-                        onPressed: () {},
+                        onPressed: () => _deleteTask(index),
                         icon: Icon(Icons.delete, color: Colors.red),
                       ),
                     ),
