@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stateful_widget1/todoApp.dart';
 import 'package:stateful_widget1/widget/CityCard.dart';
 
 void main() {
@@ -10,7 +11,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: "Aftab", home: MyHome());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "Aftab",
+      home: TodoApp(),
+    );
   }
 }
 
