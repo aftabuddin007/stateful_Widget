@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stateful_widget1/Mquery.dart';
 import 'package:stateful_widget1/todoApp.dart';
 import 'package:stateful_widget1/widget/CityCard.dart';
 
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Aftab",
-      home: TodoApp(),
+      home: Mquery(),
+      // TodoApp(),
     );
   }
 }
