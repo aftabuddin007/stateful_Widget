@@ -13,6 +13,8 @@ class _MqueryState extends State<Mquery> {
     Size screenSize = MediaQuery.of(context).size;
     double widthSize = MediaQuery.of(context).size.width;
     double fontSize = screenSize.width > 600 ? 32 : 18;
+    double pexelRatio = MediaQuery.of(context).devicePixelRatio;
+
     return Scaffold(
       appBar: AppBar(
         title: Text("media query"),
@@ -39,6 +41,24 @@ class _MqueryState extends State<Mquery> {
               "This is media query text",
               style: TextStyle(fontSize: fontSize),
             ),
+            Text("Pixel Ratio:$pexelRatio"),
+            Wrap(
+              spacing: 8.0,
+              runSpacing: 4.0,
+              children: List.generate(50, (index) {
+                return Chip(label: Text("Item $index"));
+              }),
+            ),
+            // LayoutBuilder(
+              // builder: (context, c) {
+              //   if (c.maxHeight > 600) {
+              //     return GridView.count(crossAxisCount: 3);
+              //   } else {
+              //     return GridView.count(crossAxisCount: 1);
+              //   }
+              // },
+            // ),
+            
           ],
         ),
       ),
