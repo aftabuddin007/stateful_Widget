@@ -19,14 +19,18 @@ class _RatioState extends State<Ratio> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-
+            SizedBox(height: 30),
             FractionallySizedBox(
-              child: ElevatedButton(onPressed: (){}, child: Text("Submit")),
+              widthFactor: 0.5,
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blueAccent,
+                  foregroundColor: Colors.white,
+                ),
+                child: Text("Submit"),
+              ),
             ),
-
-
-
-
 
             Row(
               children: [
@@ -34,7 +38,7 @@ class _RatioState extends State<Ratio> {
                   flex: 3,
                   child: Container(height: 100, color: Colors.green),
                 ),
-                Flexible(   
+                Flexible(
                   flex: 6,
                   child: Container(
                     height: 100,
