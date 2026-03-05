@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:stateful_widget1/Mquery.dart';
 import 'package:stateful_widget1/Ratio.dart';
+import 'package:stateful_widget1/tabe.dart';
 import 'package:stateful_widget1/todoApp.dart';
 import 'package:stateful_widget1/widget/CityCard.dart';
 
@@ -16,7 +17,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Aftab",
-      home: Ratio(),
+      home:MyTabe(),
+      
+      //  Ratio(),
       //  Mquery()
       // TodoApp(),
     );
